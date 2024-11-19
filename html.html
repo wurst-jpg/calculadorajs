@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Extendida</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="calculator">
+        <!-- Pantalla -->
+        <input type="text" id="display" readonly placeholder="0">
+
+        <!-- Botones -->
+        <div class="buttons">
+            <!-- Fila 1: Números -->
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button onclick="setOperator('+')">+</button>
+
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="setOperator('-')">-</button>
+
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="setOperator('*')">*</button>
+
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="setOperator('/')">/</button>
+
+            <!-- Fila 2: Operaciones especiales -->
+            <button onclick="setOperator('^')">xⁿ</button>
+            <button onclick="calculateFactorial()">n!</button>
+            <button onclick="calculateSquareRoot()">√x</button>
+            <button onclick="backspace()">←</button>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
